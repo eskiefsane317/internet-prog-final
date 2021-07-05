@@ -1,0 +1,15 @@
+<div>
+  <mat-card class="example-card">
+    <mat-card-title style="color: dodgerblue; text-align: center;"> {{ soru.baslik }} </mat-card-title>
+
+    <hr>
+    <mat-card-content>
+      <div [innerHTML]="soru.icerik"></div>
+    </mat-card-content>
+<hr>
+    <mat-card-actions>
+      <button style="color: dodgerblue;" *ngIf="Auth()" mat-button (click)="cevapla()">Cevapla</button>
+      <button style="color: dodgerblue;" mat-button (click)="detayaGit(soru.Id)">Detay</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
